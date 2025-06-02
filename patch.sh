@@ -46,6 +46,10 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
+# Chown files
+chown xui:xui /home/xui/bin/php/lib/php/extensions/no-debug-non-zts-20170718/xui.so
+chown xui:xui /home/xui/bin/php/lib/php/extensions/no-debug-non-zts-20190902/xui.so
+
 # Restart the xuione service
 service xuione restart
 /home/xui/status
